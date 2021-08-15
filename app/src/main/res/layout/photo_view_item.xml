@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/dates_taken"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:textColor="?android:textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/small_image"
+        tools:ignore="UnusedAttribute"
+        tools:text="01.01.2021" />
+
+    <TextView
+        android:id="@+id/owner_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:textColor="?android:textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dates_taken"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/small_image"
+        tools:ignore="UnusedAttribute"
+        tools:text="test" />
+
+    <TextView
+        android:id="@+id/photo_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dates_taken"
+        tools:ignore="UnusedAttribute"
+        tools:text="A collection of samples to discuss and showcase different architectural tools and patterns for Android apps." />
+
+    <ImageView
+        android:id="@+id/small_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View android:id="@+id/divider"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/photo_description"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
